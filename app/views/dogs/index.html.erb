@@ -23,6 +23,7 @@
         <td><%= puppy.age %></td>
         <td><%= link_to 'show', dog_path(puppy) %></td>
         <td><%= link_to 'edit', edit_dog_path(puppy) %></td>
+        <td><%= link_to 'delete', puppy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
