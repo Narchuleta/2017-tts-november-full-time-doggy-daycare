@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :owners
   resources :dogs
   # is the same as:
   # resources :dogs, only: [:index, :new, :create, :show, :edit, :update, :destroy]
