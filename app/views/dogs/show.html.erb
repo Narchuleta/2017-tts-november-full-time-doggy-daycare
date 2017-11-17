@@ -8,12 +8,12 @@
 </p>
 
 <p>
-  <strong>Owner: </strong><%= @dog.owner.try(:name) %>
+  <strong>Owner: </strong><%= link_to @dog.owner.try(:name), owner_path(@dog.owner) %>
 </p>
 
 <!-- Breed -->
 <p>
-  <strong>Breed: </strong><%= @dog.breed %>
+  <strong>Breed: </strong><%= @dog.breed.try(:name) %>
 </p>
 
 <!-- Age -->
@@ -23,7 +23,7 @@
 
 <!-- Date Added -->
 <p>
-  <strong>Date Added: </strong><%= @dog.created_at %>
+  <strong>Date Added: </strong><%= @dog.created_at.stamp('April 27, 2001') %>
 </p>
 
 <%= link_to 'Home', dogs_path, class: 'btn btn-default' %>

@@ -10,5 +10,11 @@
   <%= @owner.phone %>
 </p>
 
+<div class="well">
+  <% @owner.dogs.each do |dog| %>
+    <h4><%= link_to dog.name, dog_path(dog) %></h4>
+  <% end %>
+</div>
+
 <%= link_to 'Edit', edit_owner_path(@owner) %> |
 <%= link_to 'Back', owners_path %>
